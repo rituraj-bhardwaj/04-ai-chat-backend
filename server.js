@@ -10,10 +10,10 @@ const apiKey = process.env.GEMINI_API_KEY;
 
 const app = express();
 // const server = createServer(app);
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: process.env.CORS_ORIGIN,
 }));
 app.use(express.json());
 
